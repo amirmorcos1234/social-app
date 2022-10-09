@@ -16,12 +16,18 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@organisms/*": ["src/components/organisms/*"],
+      "@molecules/*": ["src/components/molecules/*"],
+      "@atoms/*": ["src/components/atoms/*"],
+      "@navigation/*": ["src/navigation/*"],
       "@screens/*": ["src/screens/*"],
       "@utils/*": ["src/utils/*"],
       "@theme/*": ["src/theme/*"],
-      "@graphql/*": ["src/services/*"],
+      "@services/*": ["src/services/*"],
+      "@models/*": ["src/models/*"],
+      "@contexts/*": ["src/contexts/*"]
     },
-    "types": ["node", "jest", "@types/styled-components-react-native"]
+    "types": ["node", "jest"]
   },
   "include": ["src"],
   "exclude": [
