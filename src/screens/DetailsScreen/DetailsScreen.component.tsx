@@ -9,6 +9,7 @@ import { useRoute } from '@navigation/hooks/useRoute';
 import { getComments } from '@services/PostServices/PostServices';
 import { useCallback, useEffect, useState } from 'react';
 import { FlatList, ListRenderItemInfo } from 'react-native';
+import Toast from 'react-native-toast-message';
 
 import styles from './DetailsScreen.style';
 
@@ -26,7 +27,11 @@ const DetailsScreen = () => {
       const data = await getComments(item.id);
       setComments(data);
     } catch (e) {
-    } finally {
+      Toast.show({
+        position: 'bottom',
+        type: 'error',
+        text1: 'Something went wrong',
+      });
     }
   }, [item.id]);
 

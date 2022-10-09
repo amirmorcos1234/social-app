@@ -1,5 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
+import Toast from 'react-native-toast-message';
 
 import MainNavigation from '@navigation/MainNavigation'
 import {LoaderProvider} from '@contexts/LoaderContext/LoaderContext'
@@ -13,6 +14,7 @@ const App = () => {
   <CustomLoader />
   <MainNavigation/>
   </LoaderProvider>
+  <Toast />
  </NavigationContainer>
   );
 };
